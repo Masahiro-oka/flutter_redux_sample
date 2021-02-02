@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutterreduxsample/action/action_increment.dart';
 import 'package:flutterreduxsample/state/route_state.dart';
-import 'package:redux/redux.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({this.title});
@@ -10,7 +9,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-//    final store = StoreProvider.of<Store>(context);
     return Scaffold(
           body: Center(
             child: StoreConnector<RouteState , int>(
@@ -35,28 +33,4 @@ class MyHomePage extends StatelessWidget {
           ),
         );
       }
-//      Scaffold(
-//      appBar: AppBar(
-//        title: Text(widget.title),
-//      ),
-//      body: Center(
-//        child: Column(
-//          mainAxisAlignment: MainAxisAlignment.center,
-//          children: <Widget>[
-//            Text(
-//              'You have pushed the button this many times:',
-//            ),
-//            Text(
-//              '$_counter',
-//              style: Theme.of(context).textTheme.headline4,
-//            ),
-//          ],
-//        ),
-//      ),
-//      floatingActionButton: FloatingActionButton(
-//        onPressed: _incrementCounter,
-//        tooltip: 'Increment',
-//        child: Icon(Icons.add),
-//      ),
-//    );
   }
